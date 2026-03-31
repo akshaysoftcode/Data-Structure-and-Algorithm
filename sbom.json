@@ -1,0 +1,411 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-31T00:00:00Z",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "SBOM Generator",
+        "version": "1.4.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "MyEnterpriseApplication",
+      "version": "3.2.1",
+      "description": "Enterprise application SBOM with vulnerability analysis"
+    }
+  },
+  "vulnerabilitySummary": {
+    "totalPackages": 30,
+    "nonVulnerable": {
+      "count": 14,
+      "description": "Packages with no known vulnerabilities"
+    },
+    "vulnerable": {
+      "count": 16,
+      "description": "Packages with known vulnerabilities",
+      "breakdown": {
+        "critical": {
+          "count": 4,
+          "cvssRange": "9.0 - 10.0",
+          "description": "Immediate action required"
+        },
+        "high": {
+          "count": 5,
+          "cvssRange": "7.0 - 8.9",
+          "description": "Urgent remediation needed"
+        },
+        "medium": {
+          "count": 4,
+          "cvssRange": "4.0 - 6.9",
+          "description": "Should be addressed soon"
+        },
+        "low": {
+          "count": 3,
+          "cvssRange": "0.1 - 3.9",
+          "description": "Low priority, monitor and plan"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.21",
+      "purl": "pkg:npm/lodash@4.17.21",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "express",
+      "version": "4.18.2",
+      "purl": "pkg:npm/express@4.18.2",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "react",
+      "version": "18.2.0",
+      "purl": "pkg:npm/react@18.2.0",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "1.26.0",
+      "purl": "pkg:pypi/numpy@1.26.0",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "pandas",
+      "version": "2.1.1",
+      "purl": "pkg:pypi/pandas@2.1.1",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "axios",
+      "version": "1.5.0",
+      "purl": "pkg:npm/axios@1.5.0",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "spring-boot",
+      "version": "3.1.4",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot@3.1.4",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "gson",
+      "version": "2.10.1",
+      "purl": "pkg:maven/com.google.code.gson/gson@2.10.1",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "boto3",
+      "version": "1.28.57",
+      "purl": "pkg:pypi/boto3@1.28.57",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "typescript",
+      "version": "5.2.2",
+      "purl": "pkg:npm/typescript@5.2.2",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "7.4.2",
+      "purl": "pkg:pypi/pytest@7.4.2",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "jackson-databind-safe",
+      "version": "2.15.2",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.2",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "vue",
+      "version": "3.3.4",
+      "purl": "pkg:npm/vue@3.3.4",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "werkzeug",
+      "version": "3.0.0",
+      "purl": "pkg:pypi/werkzeug@3.0.0",
+      "vulnerabilityStatus": "non-vulnerable"
+    },
+    {
+      "type": "library",
+      "name": "log4j-core",
+      "version": "2.14.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-44228",
+          "severity": "CRITICAL",
+          "cvssScore": 10.0,
+          "description": "Log4Shell remote code execution via JNDI lookup",
+          "remediation": "Upgrade to log4j-core 2.17.1 or later"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "openssl",
+      "version": "1.1.1k",
+      "purl": "pkg:generic/openssl@1.1.1k",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-0778",
+          "severity": "CRITICAL",
+          "cvssScore": 9.8,
+          "description": "Infinite loop in BN_mod_sqrt causing denial of service",
+          "remediation": "Upgrade to OpenSSL 1.1.1n or 3.0.2+"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "struts2-core",
+      "version": "2.5.28",
+      "purl": "pkg:maven/org.apache.struts/struts2-core@2.5.28",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-50164",
+          "severity": "CRITICAL",
+          "cvssScore": 9.8,
+          "description": "Path traversal allows attacker to upload malicious files",
+          "remediation": "Upgrade to Struts 2.5.33 or 6.3.0.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "shiro-core",
+      "version": "1.9.0",
+      "purl": "pkg:maven/org.apache.shiro/shiro-core@1.9.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-22602",
+          "severity": "CRITICAL",
+          "cvssScore": 9.1,
+          "description": "Authentication bypass via crafted HTTP request",
+          "remediation": "Upgrade to Apache Shiro 1.11.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jackson-databind",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-42003",
+          "severity": "HIGH",
+          "cvssScore": 8.8,
+          "description": "Deserialization leading to deep wrapper array nesting",
+          "remediation": "Upgrade to jackson-databind 2.14.0+"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "spring-security-core",
+      "version": "5.6.0",
+      "purl": "pkg:maven/org.springframework.security/spring-security-core@5.6.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-22978",
+          "severity": "HIGH",
+          "cvssScore": 8.1,
+          "description": "Authorization bypass in RegexRequestMatcher",
+          "remediation": "Upgrade to Spring Security 5.6.9 / 5.7.4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pillow",
+      "version": "9.2.0",
+      "purl": "pkg:pypi/pillow@9.2.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-44271",
+          "severity": "HIGH",
+          "cvssScore": 7.5,
+          "description": "Uncontrolled resource consumption in ImageFont",
+          "remediation": "Upgrade to Pillow 10.0.1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "netty-handler",
+      "version": "4.1.77.Final",
+      "purl": "pkg:maven/io.netty/netty-handler@4.1.77.Final",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-41881",
+          "severity": "HIGH",
+          "cvssScore": 7.5,
+          "description": "Stack overflow via crafted header value",
+          "remediation": "Upgrade to Netty 4.1.86.Final"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cryptography",
+      "version": "38.0.0",
+      "purl": "pkg:pypi/cryptography@38.0.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-23931",
+          "severity": "HIGH",
+          "cvssScore": 7.4,
+          "description": "Memory corruption in Cipher.update_into function",
+          "remediation": "Upgrade to cryptography 39.0.1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.27.0",
+      "purl": "pkg:pypi/requests@2.27.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-32681",
+          "severity": "MEDIUM",
+          "cvssScore": 6.1,
+          "description": "Proxy-Authorization header leaked on cross-origin redirect",
+          "remediation": "Upgrade to requests 2.31.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "7.3.4",
+      "purl": "pkg:npm/semver@7.3.4",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "severity": "MEDIUM",
+          "cvssScore": 5.3,
+          "description": "Regular expression denial of service (ReDoS)",
+          "remediation": "Upgrade to semver 7.5.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "moment",
+      "version": "2.29.3",
+      "purl": "pkg:npm/moment@2.29.3",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-24785",
+          "severity": "MEDIUM",
+          "cvssScore": 5.3,
+          "description": "Path traversal via locale file path manipulation",
+          "remediation": "Upgrade to moment 2.29.4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "express-fileupload",
+      "version": "1.3.1",
+      "purl": "pkg:npm/express-fileupload@1.3.1",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-27261",
+          "severity": "MEDIUM",
+          "cvssScore": 4.3,
+          "description": "Unauthenticated users can exhaust server memory",
+          "remediation": "Upgrade to express-fileupload 1.4.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "django",
+      "version": "3.2.15",
+      "purl": "pkg:pypi/django@3.2.15",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-41164",
+          "severity": "LOW",
+          "cvssScore": 3.7,
+          "description": "Denial of service via email address with many parts",
+          "remediation": "Upgrade to Django 3.2.21 / 4.2.5"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jquery",
+      "version": "3.6.0",
+      "purl": "pkg:npm/jquery@3.6.0",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2019-11358",
+          "severity": "LOW",
+          "cvssScore": 3.7,
+          "description": "Prototype pollution via jQuery.extend",
+          "remediation": "Upgrade to jQuery 3.6.4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "minimist",
+      "version": "1.2.5",
+      "purl": "pkg:npm/minimist@1.2.5",
+      "vulnerabilityStatus": "vulnerable",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-44906",
+          "severity": "LOW",
+          "cvssScore": 2.5,
+          "description": "Prototype pollution in minimist argument parser",
+          "remediation": "Upgrade to minimist 1.2.6"
+        }
+      ]
+    }
+  ]
+}
